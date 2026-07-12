@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Resourceful Bride · Hochzeitsplanung mit KI · Endlich ein Plan.</title>
+<meta name="description" content="Hochzeitsplanung mit KI, ehrlich und praktisch. Ein kostenloser Paletten-Generator, ein dreisprachiges Foto-Bingo, eine 1:1 Power Hour und ein kompletter Guide. Auf Deutsch, Englisch und Französisch.">
+<link rel="alternate" hreflang="en" href="https://theresourcefulbride.com/">
+<link rel="alternate" hreflang="fr" href="https://theresourcefulbride.com/fr/">
+<link rel="alternate" hreflang="de" href="https://theresourcefulbride.com/de/">
+<link rel="alternate" hreflang="x-default" href="https://theresourcefulbride.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --forest:#334331;
+    --forest-deep:#283527;
+    --cream:#FAF8F5;
+    --sand:#F1EDE5;
+    --gold:#C6A56C;
+    --gold-soft:#D8C09A;
+    --ink:#2E362D;
+    --muted:#6A7566;
+    --serif:'Libre Baskerville', Baskerville, 'Baskerville Old Face', Garamond, serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *,*::before,*::after{animation:none!important;transition:none!important;}
+  }
+  body{
+    font-family:var(--serif);
+    background:var(--cream);
+    color:var(--ink);
+    font-size:17px;
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--forest);}
+  a:focus-visible, button:focus-visible, input:focus-visible{
+    outline:2px solid var(--gold);
+    outline-offset:3px;
+  }
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px;}
+  .narrow{max-width:680px;margin:0 auto;}
+
+  /* ---------- utility type: letterspaced Baskerville caps ---------- */
+  .caps{
+    font-family:var(--serif);
+    text-transform:uppercase;
+    letter-spacing:0.22em;
+  }
+
+  /* ---------- eyebrows, rules, headings ---------- */
+  .eyebrow{
+    font-size:12px;
+    letter-spacing:0.26em;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin-bottom:18px;
+  }
+  .eyebrow::before{content:"✦";margin-right:10px;font-size:10px;}
+  h1,h2,h3{font-weight:400;color:var(--forest);line-height:1.25;}
+  h2{font-size:clamp(28px,4vw,40px);margin-bottom:22px;}
+  h3{font-size:20px;margin-bottom:10px;}
+  .lede{font-size:clamp(17px,2vw,19px);color:var(--ink);}
+  .double-rule{
+    width:120px;margin:26px auto;
+    border-top:1px solid var(--gold);
+    border-bottom:1px solid var(--gold);
+    height:5px;
+  }
+  .section{padding:96px 0;}
+  .section.alt{background:var(--sand);}
+  .center{text-align:center;}
+
+  /* ---------- buttons ---------- */
+  .btn{
+    display:inline-block;
+    font-family:var(--serif);
+    font-size:13px;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    text-decoration:none;
+    white-space:nowrap;
+    padding:16px 32px;
+    border:1px solid var(--forest);
+    background:var(--forest);
+    color:var(--cream);
+    transition:background .25s ease,color .25s ease;
+    cursor:pointer;
+  }
+  .btn:hover{background:var(--forest-deep);}
+  .btn.ghost{background:transparent;color:var(--forest);}
+  .btn.ghost:hover{background:var(--forest);color:var(--cream);}
+  .btn.gold{background:var(--gold);border-color:var(--gold);color:var(--forest-deep);}
+  .btn.gold:hover{background:var(--gold-soft);border-color:var(--gold-soft);}
+  .btn.small{padding:12px 22px;font-size:12px;}
+
+  /* ---------- header ---------- */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(250,248,245,0.96);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid rgba(198,165,108,0.35);
+  }
+  .nav{
+    display:flex;align-items:center;justify-content:space-between;
+    gap:20px;
+    padding:16px 0;
+  }
+  .wordmark{
+    text-decoration:none;
+    color:var(--forest);
+    font-family:var(--serif);
+    font-size:14px;
+    letter-spacing:0.26em;
+    text-transform:uppercase;
+    line-height:1.55;
+    white-space:nowrap;
+  }
+  .wordmark span{display:block;}
+  .nav .wordmark{display:flex;align-items:center;gap:14px;}
+  .nav .logo{
+    height:44px;width:44px;flex-shrink:0;display:block;
+  }
+  .wm-text span{display:block;}
+  .nav-links{
+    display:flex;gap:26px;list-style:none;align-items:center;
+    flex-wrap:nowrap;
+  }
+  .nav-links a{
+    text-decoration:none;font-size:12px;
+    letter-spacing:0.14em;text-transform:uppercase;color:var(--ink);
+    white-space:nowrap;
+    padding:6px 0;border-bottom:1px solid transparent;
+    transition:border-color .2s ease,color .2s ease;
+  }
+  .nav-links a:hover{color:var(--forest);border-bottom-color:var(--gold);}
+  .nav-links a.nav-cta{
+    border:1px solid var(--gold);padding:10px 18px;color:var(--forest);
+  }
+  .nav-links a.nav-cta:hover{background:var(--gold);color:var(--forest-deep);border-bottom-color:var(--gold);}
+  .menu-btn{
+    display:none;background:none;border:1px solid var(--forest);
+    color:var(--forest);font-family:var(--serif);
+    font-size:11px;letter-spacing:0.16em;text-transform:uppercase;
+    padding:10px 16px;cursor:pointer;white-space:nowrap;
+  }
+  @media (max-width:980px){
+    .menu-btn{display:block;}
+    .nav-links{
+      display:none;position:absolute;left:0;right:0;top:100%;
+      background:var(--cream);flex-direction:column;gap:0;
+      border-bottom:1px solid rgba(198,165,108,0.35);
+      padding:10px 0 20px;
+    }
+    .nav-links.open{display:flex;}
+    .nav-links li{width:100%;text-align:center;}
+    .nav-links a{display:inline-block;padding:14px 0;}
+    .nav-links a.nav-cta{margin-top:10px;}
+  }
+
+  /* ---------- hero ---------- */
+  .hero{padding:116px 0 104px;text-align:center;}
+  .hero .kicker{
+    font-size:12px;letter-spacing:0.3em;text-transform:uppercase;
+    color:var(--muted);margin-bottom:34px;
+  }
+  .hero h1{
+    font-size:clamp(44px,7.5vw,84px);
+    font-style:italic;
+    letter-spacing:0.01em;
+  }
+  .hero .lede{max-width:640px;margin:30px auto 42px;}
+  .hero-ctas{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;}
+
+  /* ---------- numbers strip ---------- */
+  .numbers{
+    border-top:1px solid rgba(198,165,108,0.4);
+    border-bottom:1px solid rgba(198,165,108,0.4);
+    background:var(--forest);
+  }
+  .numbers .wrap{
+    display:grid;grid-template-columns:repeat(4,1fr);
+    text-align:center;
+  }
+  .numbers .cell{padding:34px 12px;}
+  .numbers .cell + .cell{border-left:1px solid rgba(198,165,108,0.35);}
+  .numbers .n{font-size:32px;color:var(--cream);}
+  .numbers .l{
+    font-size:11px;letter-spacing:0.24em;text-transform:uppercase;
+    color:var(--gold-soft);margin-top:6px;
+  }
+  @media (max-width:700px){
+    .numbers .wrap{grid-template-columns:repeat(2,1fr);}
+    .numbers .cell:nth-child(3){border-left:none;}
+    .numbers .cell:nth-child(1),.numbers .cell:nth-child(2){border-bottom:1px solid rgba(198,165,108,0.35);}
+  }
+
+  /* ---------- two-column feature ---------- */
+  .feature{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;}
+  @media (max-width:860px){.feature{grid-template-columns:1fr;gap:44px;}}
+  .feature .visual{min-width:0;}
+
+  /* ---------- palette preview (matches the palette tool format) ---------- */
+  .palette-frame{
+    border:1px solid rgba(51,67,49,0.25);
+    background:#FFFFFF;
+    box-shadow:0 1px 3px rgba(51,67,49,0.08);
+  }
+  .palette-cols{display:flex;}
+  .palette-cols .col{display:flex;flex-direction:column;}
+  .palette-cols .col:nth-child(1){flex:3;}
+  .palette-cols .col:nth-child(2){flex:2.2;}
+  .palette-cols .col:nth-child(3){flex:1.6;}
+  .palette-cols .col:nth-child(4){flex:1.1;}
+  .palette-cols .col:nth-child(5){flex:1.2;}
+  .palette-cols .chip{height:110px;}
+  .palette-cols .col:nth-child(1) .chip{background:#F6F3EF;border-bottom:1px solid #EFEAE1;}
+  .palette-cols .col:nth-child(2) .chip{background:#94AE8F;}
+  .palette-cols .col:nth-child(3) .chip{background:#334331;}
+  .palette-cols .col:nth-child(4) .chip{background:#D7CCC1;}
+  .palette-cols .col:nth-child(5) .chip{background:#D4AF37;}
+  .palette-cols .lab{
+    padding:12px 5px 14px;
+    text-align:center;
+    font-size:8.5px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--muted);
+    line-height:1.7;
+    border-left:1px solid #F1EDE5;
+  }
+  .palette-cols .col:first-child .lab{border-left:none;}
+  .palette-cols .lab .dot{
+    display:block;width:8px;height:8px;border-radius:50%;
+    margin:0 auto 7px;border:1px solid rgba(51,67,49,0.15);
+  }
+  .palette-cols .lab b{
+    display:block;font-weight:400;color:var(--ink);
+    font-size:9.5px;letter-spacing:0.16em;
+  }
+  .hex-row{
+    display:flex;gap:8px;flex-wrap:nowrap;
+    margin-top:12px;
+  }
+  .hex-row .hex{
+    display:flex;align-items:center;gap:6px;
+    flex:1;min-width:0;
+    border:1px solid rgba(51,67,49,0.2);
+    background:#FFFFFF;
+    padding:6px 8px;
+    font-size:10px;
+    color:var(--ink);
+  }
+  .hex-row .hex > div{min-width:0;overflow:hidden;}
+  .hex-row .hex i{
+    flex-shrink:0;
+    width:10px;height:10px;border-radius:50%;
+    border:1px solid rgba(51,67,49,0.15);
+    font-style:normal;
+  }
+  .hex-row .hex span{
+    display:block;font-size:7.5px;letter-spacing:0.08em;
+    text-transform:uppercase;color:var(--muted);
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+  }
+  @media (max-width:560px){
+    .hex-row{flex-wrap:wrap;}
+    .hex-row .hex{flex:0 1 auto;}
+  }
+  @media (max-width:560px){
+    .palette-cols .lab{font-size:8px;letter-spacing:0.08em;padding:10px 3px 12px;}
+    .palette-cols .lab b{letter-spacing:0.1em;}
+  }
+
+  /* ---------- bingo card ---------- */
+  .bingo-frame{border:1px solid var(--forest);padding:14px;background:var(--cream);}
+  .bingo-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:2px;
+    background:rgba(51,67,49,0.3);
+    border:1px solid rgba(51,67,49,0.3);
+  }
+  .bingo-grid div{
+    background:var(--cream);
+    aspect-ratio:1/1;
+    display:flex;align-items:center;justify-content:center;
+    text-align:center;
+    font-size:clamp(9.5px,1.15vw,12.5px);
+    font-style:italic;
+    color:var(--forest);
+    padding:10px;
+    line-height:1.55;
+  }
+  .bingo-grid div.hit{background:var(--sand);}
+  .bingo-grid div.star{color:var(--gold);font-size:22px;font-style:normal;}
+  .bingo-frame .caption{
+    display:flex;justify-content:space-between;
+    font-size:11px;letter-spacing:0.2em;text-transform:uppercase;
+    color:var(--muted);padding:12px 4px 2px;
+  }
+
+  /* ---------- template links ---------- */
+  .template-list{list-style:none;margin-top:28px;}
+  .template-list li{
+    display:flex;align-items:center;justify-content:space-between;
+    gap:16px;flex-wrap:wrap;
+    padding:16px 0;
+    border-bottom:1px solid rgba(198,165,108,0.4);
+  }
+  .template-list li:first-child{border-top:1px solid rgba(198,165,108,0.4);}
+  .template-list .t-name{color:var(--ink);}
+  .template-list .t-name::before{content:"✦";color:var(--gold);margin-right:12px;font-size:11px;}
+
+  /* ---------- photo frames ---------- */
+  .photo-frame{
+    border:1px solid var(--forest);
+    padding:14px;
+    background:var(--cream);
+  }
+  .photo-frame img{display:block;width:100%;height:auto;}
+  .photo-frame .photo-caption{
+    font-size:11px;letter-spacing:0.2em;text-transform:uppercase;
+    color:var(--muted);padding:12px 4px 2px;text-align:center;
+  }
+  .bingo-langs{display:flex;justify-content:center;align-items:center;gap:8px;padding:12px 4px 2px;}
+  .bingo-langs button{
+    background:none;border:none;cursor:pointer;
+    font-family:var(--serif);
+    font-size:11px;letter-spacing:0.2em;text-transform:uppercase;
+    color:var(--muted);padding:2px 4px;
+  }
+  .bingo-langs button:hover{color:var(--forest);}
+  .bingo-langs button[aria-pressed="true"]{color:var(--gold);}
+  .bingo-langs .sep{font-size:11px;color:var(--muted);}
+  .photo-placeholder{
+    aspect-ratio:4/5;
+    background:var(--sand);
+    display:flex;align-items:center;justify-content:center;
+    text-align:center;
+    font-size:12px;letter-spacing:0.2em;text-transform:uppercase;
+    color:var(--muted);
+    padding:20px;
+  }
+
+  /* ---------- prompt box (brand signature) ---------- */
+  .prompt-box{
+    background:var(--cream);
+    border:1px solid var(--forest);
+    padding:34px 38px;
+    position:relative;
+    text-align:left;
+  }
+  .prompt-box .tag{
+    position:absolute;top:-11px;left:26px;
+    background:var(--cream);
+    padding:0 12px;
+    font-size:11px;letter-spacing:0.24em;text-transform:uppercase;
+    color:var(--gold);
+  }
+  .prompt-box .tag::before{content:"✦ ";}
+  .prompt-box p{font-style:italic;color:var(--ink);}
+
+  /* ---------- waitlist ---------- */
+  .waitlist{background:var(--forest);color:var(--cream);}
+  .waitlist h2{color:var(--cream);}
+  .waitlist .lede{color:#DCE2D8;}
+  .waitlist .eyebrow{color:var(--gold);}
+  .waitlist .form-note{color:#AEB9AA;}
+  .waitlist .signup input[type="email"]{
+    border-color:var(--gold);background:var(--forest-deep);color:var(--cream);
+  }
+  .waitlist .signup input::placeholder{color:#8B968A;}
+
+  /* ---------- forms ---------- */
+  .signup{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px;}
+  .signup input[type="email"]{
+    flex:1;min-width:230px;
+    font-family:var(--serif);font-size:15px;
+    padding:15px 18px;
+    border:1px solid var(--forest);
+    background:var(--cream);color:var(--ink);
+  }
+  .signup input::placeholder{color:var(--muted);font-style:italic;}
+  .form-note{font-size:13px;color:var(--muted);margin-top:14px;font-style:italic;}
+
+  /* ---------- power hour ---------- */
+  .ph-list{list-style:none;margin:26px 0 10px;}
+  .ph-list li{
+    padding:13px 0 13px 30px;position:relative;
+    border-bottom:1px solid rgba(198,165,108,0.35);
+  }
+  .ph-list li::before{
+    content:"✦";position:absolute;left:2px;color:var(--gold);font-size:12px;
+  }
+  .price-line{
+    margin:30px 0 26px;
+    font-size:13px;letter-spacing:0.2em;text-transform:uppercase;color:var(--forest);
+  }
+  .price-line b{font-weight:700;}
+
+  /* ---------- honest promise ---------- */
+  .honest .big{
+    font-size:clamp(22px,3vw,30px);
+    font-style:italic;line-height:1.6;
+    max-width:760px;margin:0 auto;
+    color:var(--forest);
+  }
+  .honest .big em{color:var(--gold);font-style:italic;}
+  .honest .small{max-width:640px;margin:28px auto 0;color:var(--ink);font-size:16px;}
+
+  /* ---------- bonus band (free guide) ---------- */
+  .bonus{
+    background:var(--forest);
+    border-top:1px solid rgba(198,165,108,0.4);
+    border-bottom:1px solid rgba(198,165,108,0.4);
+    padding:80px 0;
+  }
+  .bonus .eyebrow{color:var(--gold);}
+  .bonus h3{font-size:24px;font-style:italic;color:var(--cream);}
+  .bonus p{color:#DCE2D8;}
+  .bonus .prompt-box{
+    background:var(--cream);
+    border:1px solid var(--gold);
+  }
+  .bonus .prompt-box p{color:var(--ink);}
+  .bonus .prompt-box .tag{
+    background:var(--forest);
+    color:var(--gold);
+  }
+
+  /* ---------- about ---------- */
+  .about-marks{
+    display:grid;grid-template-columns:1fr 1fr;gap:2px;
+    border:1px solid rgba(198,165,108,0.45);
+    background:rgba(198,165,108,0.45);
+  }
+  .about-marks div{
+    background:var(--cream);padding:26px 24px;
+    font-size:15px;line-height:1.6;
+  }
+  .about-marks div b{
+    font-size:12px;letter-spacing:0.2em;text-transform:uppercase;
+    font-weight:400;
+    color:var(--forest);display:block;margin-bottom:6px;
+  }
+  @media (max-width:600px){.about-marks{grid-template-columns:1fr;}}
+
+  /* ---------- footer ---------- */
+  footer{
+    background:var(--forest-deep);color:#C9D1C5;
+    padding:70px 0 40px;text-align:center;font-size:14px;
+  }
+  footer .wordmark{color:var(--cream);display:inline-block;margin-bottom:8px;white-space:normal;}
+  footer .tagline{font-style:italic;color:var(--gold);margin-bottom:34px;}
+  .foot-links{list-style:none;display:flex;gap:28px;justify-content:center;flex-wrap:wrap;margin-bottom:34px;}
+  .foot-links a{
+    color:#C9D1C5;text-decoration:none;font-size:11.5px;
+    letter-spacing:0.16em;text-transform:uppercase;
+  }
+  .foot-links a:hover{color:var(--gold);}
+  .langs{font-size:11px;letter-spacing:0.3em;color:var(--gold-soft);margin-bottom:26px;}
+  .legal{font-size:12px;color:#8B968A;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="wordmark" href="#top"><img class="logo" src="../images/logo.png" alt="" onerror="this.style.display='none'"><span class="wm-text"><span>The Resourceful</span><span>Bride</span></span></a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="nav-links" onclick="toggleNav(this)">Menü</button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#palette">Palette</a></li>
+      <li><a href="#bingo">Foto-Bingo</a></li>
+      <li><a href="#ebook">Der Guide</a></li>
+      <li><a href="#powerhour">Power Hour</a></li>
+      <li><a href="#about">Über mich</a></li>
+      <!-- LAUNCH-TAG: Sobald der Guide live ist, Text auf "Guide holen" ändern. -->
+      <li><a class="nav-cta" href="#ebook">Warteliste</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero wrap">
+    <p class="kicker">Hochzeitsplanung mit KI · DE · EN · FR</p>
+    <h1>Endlich ein Plan.</h1>
+    <div class="double-rule"></div>
+    <p class="lede">Ich habe eine zweitägige, dreisprachige Hochzeit für 120 Gäste in einem Schweizer Herrenhaus aus dem 17. Jahrhundert geplant, ohne Koordinatorin. Eine KI-Assistentin hat mir unterwegs geholfen, mehr als 80 Planungsaufgaben zu durchdenken. Alles, was ich dabei gelernt habe, lebt jetzt hier, bereit für deine Hochzeit.</p>
+    <div class="hero-ctas">
+      <a class="btn" href="https://palette.theresourcefulbride.com" target="_blank" rel="noopener">Paletten-Tool ausprobieren</a>
+      <a class="btn ghost" href="#bingo">Zum Foto-Bingo</a>
+    </div>
+  </section>
+
+  <!-- ================= NUMBERS ================= -->
+  <section class="numbers" aria-label="Die Hochzeit hinter der Marke">
+    <div class="wrap">
+      <div class="cell"><div class="n">120</div><div class="l">Gäste</div></div>
+      <div class="cell"><div class="n">3</div><div class="l">Sprachen</div></div>
+      <div class="cell"><div class="n">2</div><div class="l">Tage</div></div>
+      <div class="cell"><div class="n">80+</div><div class="l">Aufgaben mit KI</div></div>
+    </div>
+  </section>
+
+  <!-- ================= PALETTE TOOL ================= -->
+  <section class="section" id="palette">
+    <div class="wrap feature">
+      <div>
+        <p class="eyebrow">Kostenloses Tool</p>
+        <h2>Der Hochzeitsfarben-Generator</h2>
+        <p>Du hast eine Farbe im Kopf, das Tool baut die Palette darum herum. Wähle deine Ausgangsfarbe und eine Ästhetik, und der Generator liefert dir eine komplette Hochzeitspalette, mit proportionalen Farbfeldern und einer klaren Rolle für jede Farbe. Noch keine Ausgangsfarbe? Dann stöbere im Tab mit den kuratierten Paletten: 121 Kombinationen, jede mit Epoche und Beschreibung. Kostenlos im Browser und ohne Anmeldung.</p>
+        <p style="margin-top:14px;">Wenn du die richtige gefunden hast, nimm sie direkt mit zu Floristik und Papeterie. Sie ist der Gesprächseinstieg, der diese Termine leichter macht.</p>
+        <div style="margin-top:30px;">
+          <a class="btn" href="https://palette.theresourcefulbride.com" target="_blank" rel="noopener">Paletten-Tool öffnen</a>
+        </div>
+        <p class="form-note">Das Tool ist auf Englisch, die Farben sprechen jede Sprache.</p>
+      </div>
+      <div class="visual">
+        <div class="palette-frame" role="img" aria-label="Eine vom Tool generierte Palette: proportionale Farbfelder mit Rollen und Hex-Codes">
+          <div class="palette-cols">
+            <div class="col">
+              <div class="chip"></div>
+              <div class="lab"><span class="dot" style="background:#F6F3EF;"></span><b>Dominant</b>Textilien · Schilder · Papeterie</div>
+            </div>
+            <div class="col">
+              <div class="chip"></div>
+              <div class="lab"><span class="dot" style="background:#94AE8F;"></span><b>Sekundär</b>Blumen · Brautjungfern</div>
+            </div>
+            <div class="col">
+              <div class="chip"></div>
+              <div class="lab"><span class="dot" style="background:#334331;"></span><b>Thema</b>Deko-Akzente</div>
+            </div>
+            <div class="col">
+              <div class="chip"></div>
+              <div class="lab"><span class="dot" style="background:#D7CCC1;"></span><b>Tiefe</b>Details</div>
+            </div>
+            <div class="col">
+              <div class="chip"></div>
+              <div class="lab"><span class="dot" style="background:#D4AF37;"></span><b>Metallic</b>Besteck · Rahmen</div>
+            </div>
+          </div>
+        </div>
+        <div class="hex-row">
+          <div class="hex"><i style="background:#F6F3EF;"></i><div>#f6f3ef<span>Dominant</span></div></div>
+          <div class="hex"><i style="background:#94AE8F;"></i><div>#94ae8f<span>Sekundär</span></div></div>
+          <div class="hex"><i style="background:#334331;"></i><div>#334331<span>Thema</span></div></div>
+          <div class="hex"><i style="background:#D7CCC1;"></i><div>#d7ccc1<span>Tiefe</span></div></div>
+          <div class="hex"><i style="background:#D4AF37;"></i><div>#D4AF37<span>Metallic</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PHOTO BINGO ================= -->
+  <section class="section alt" id="bingo">
+    <div class="wrap feature">
+      <div class="visual">
+        <div class="photo-frame">
+          <!-- BILDDATEIEN NÖTIG: images/bingo-en.png, images/bingo-fr.png, images/bingo-de.png (ein Canva-Export pro Sprachseite). Solange nicht alle drei existieren, fällt der Umschalter auf das alte bingo.png zurück. -->
+          <img id="bingo-img" src="../images/bingo-de.png" alt="Die Foto-Bingo-Karte auf Deutsch" onerror="this.onerror=null;this.src='../images/bingo.png';">
+          <div class="bingo-langs" role="group" aria-label="Sprache der Bingo-Karte wählen">
+            <button type="button" data-lang="de" data-alt="Die Foto-Bingo-Karte auf Deutsch" aria-pressed="true" onclick="swapBingo(this)">DE</button><span class="sep" aria-hidden="true">·</span>
+            <button type="button" data-lang="en" data-alt="Die Foto-Bingo-Karte auf Englisch" aria-pressed="false" onclick="swapBingo(this)">EN</button><span class="sep" aria-hidden="true">·</span>
+            <button type="button" data-lang="fr" data-alt="Die Foto-Bingo-Karte auf Französisch" aria-pressed="false" onclick="swapBingo(this)">FR</button>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p class="eyebrow">Kostenlose Vorlage</p>
+        <h2>Dreisprachiges Hochzeits-Foto-Bingo</h2>
+        <p>Ein Gästespiel, das an jedem Tisch funktioniert, auch wenn die Tische keine gemeinsame Sprache haben. Jede Karte schickt deine Gäste auf die Jagd nach den Fotos, die du dir von deinem Tag wirklich wünschst. Die Vorlage enthält die komplette Karte auf Deutsch, Englisch und Französisch, eine Seite pro Sprache, damit jeder Tisch in seiner Sprache spielt.</p>
+        <p style="margin-top:14px;">Karten ausdrucken, einen Stift auf jeden Tisch legen und das Spiel übernimmt das Kennenlernen. Das minimalistische Design ist kostenlos, direkt in Canva:</p>
+        <ul class="template-list">
+          <li>
+            <span class="t-name">Minimalistisch</span>
+            <a class="btn ghost small" href="https://canva.link/fzs5dnb53d3kqzr" target="_blank" rel="noopener">In Canva öffnen</a>
+          </li>
+        </ul>
+        <!-- LAUNCH-TAG: Kommentar-Markierungen entfernen, sobald der Etsy-Shop live ist. -->
+        <!--
+        <p class="form-note">Lieber Blumen? Die Aquarell-Designs findest du im <a href="https://www.etsy.com/shop/ResourcefulBrides" target="_blank" rel="noopener">Etsy-Shop</a>.</p>
+        -->
+        <p class="form-note">Auf Instagram? Schreib @theresourcefulbride eine DM mit dem Wort BINGO und die Vorlage kommt direkt zu dir.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= EBOOK WAITLIST ================= -->
+  <section class="section waitlist" id="ebook">
+    <div class="wrap narrow center">
+      <p class="eyebrow">Der Guide · Launch steht bevor</p>
+      <h2>Your Personal Wedding Planning Assistant</h2>
+      <p class="lede">Der komplette Guide. Ein System, das der KI zuerst beibringt, wer du bist und wie deine Hochzeit aussieht, und von dort aus alles Weitere aufbaut, vom Tagesablauf bis zu jeder Gästekommunikation, in jeder Sprache, die deine Hochzeit spricht. Es kommt als interaktive Notion-Edition: Du kannst sie direkt im Browser lesen, ganz ohne Konto. Mit einem kostenlosen Notion-Account duplizierst du sie in deinen eigenen Workspace und planst direkt darin, mit jedem künftigen Update kostenlos, ein Leben lang. Es ist auch ehrlich darüber, was KI nicht kann, und warum dein Tag weiterhin die Menschen braucht, denen du vertraust.</p>
+      <!-- MailerLite: Hier das eingebettete Formular einfügen (DE-Version, falls vorhanden) -->
+      <form class="signup" style="justify-content:center;" action="https://theresourcefulbride.subscribepage.io" method="get" aria-label="Anmeldung zur Warteliste">
+        <input type="email" name="email" placeholder="Deine E-Mail-Adresse" aria-label="E-Mail-Adresse">
+        <button class="btn gold" type="submit">Auf die Warteliste</button>
+      </form>
+      <p class="form-note">Wer auf der Warteliste steht, erhält zum Launch einen Rabattcode. Der Guide erscheint zuerst auf Englisch. DSGVO-konform, jederzeit abmeldbar.</p>
+
+      <!-- LAUNCH-TAG: Sobald der Guide auf Payhip live ist, das Formular und die Notiz oben löschen, die Kommentar-Markierungen dieses Blocks entfernen und den Link durch die exakte Payhip-Produkt-URL ersetzen. -->
+      <!--
+      <p class="price-line" style="color:#D8C09A;text-align:center;"><b>CHF 34</b> Einführungspreis · danach CHF 49</p>
+      <div style="text-align:center;"><a class="btn gold" href="https://payhip.com/TheResourcefulBride" target="_blank" rel="noopener">Guide holen</a></div>
+      -->
+
+      <!-- LAUNCH-TAG: Kommentar-Markierungen entfernen, sobald der Notion-Companion (Wedding HQ) live ist. Vorher: Namen, Preis und exakten Payhip-Link prüfen. Der Companion erscheint immer unter dem Guide, nie als eigenständige Konkurrenz dazu. -->
+      <!--
+      <div style="margin-top:52px;padding-top:44px;border-top:1px solid rgba(198,165,108,0.4);">
+        <p class="eyebrow">Neu · Die zweite Ebene</p>
+        <h3 style="font-size:24px;font-style:italic;color:var(--cream);">Das Wedding HQ</h3>
+        <p class="lede" style="font-size:16px;margin-top:14px;">Der Guide zeigt dir das System. Das Wedding HQ ist der Ort, an dem es wohnt: ein fertig aufgebauter Notion-Workspace für deine gesamte Planung, gebaut für die Zusammenarbeit mit deiner KI-Assistentin. Der verbundene Assistenten-Workflow braucht einen KI-Plan mit Notion-Anbindung; alles andere funktioniert auch ohne.</p>
+        <div style="text-align:center;margin-top:26px;"><a class="btn gold" href="https://payhip.com/TheResourcefulBride" target="_blank" rel="noopener">Zum Wedding HQ</a></div>
+      </div>
+      -->
+    </div>
+  </section>
+
+  <!-- ================= POWER HOUR ================= -->
+  <section class="section" id="powerhour">
+    <div class="wrap feature">
+      <div>
+        <p class="eyebrow">Arbeite mit mir · 1:1</p>
+        <h2>Bridal AI Power Hour</h2>
+        <p>Du verbringst Stunden mit Dingen, die Minuten dauern sollten. Dein Tagesablauf steht noch nicht und deine E-Mails an die Dienstleister liegen als Entwürfe herum. In 60 Minuten auf Zoom ändern wir das. Wir beginnen bei deinem grössten Planungsstressor und bauen dein System live auf, gemeinsam, in Claude oder ChatGPT, damit du genau siehst, wie es funktioniert, und es danach selbst wiederholen kannst.</p>
+        <ul class="ph-list">
+          <li>Tagesabläufe, auf die Minute geplant</li>
+          <li>E-Mails an Dienstleister auf Deutsch, Französisch oder Englisch</li>
+          <li>Budget-Denkarbeit und kreative Alternativen, jede Zahl von dir geprüft</li>
+          <li>Gästekommunikation in mehreren Sprachen</li>
+          <li>Die Checkliste für den Abend davor</li>
+        </ul>
+        <p>Du gehst mit einem Dokument nach Hause, das du noch am selben Tag nutzen kannst.</p>
+        <p class="price-line"><b>CHF 149</b> · 60 Minuten · Zoom · DE, EN oder FR</p>
+        <a class="btn" href="https://payhip.com/TheResourcefulBride" target="_blank" rel="noopener">Session buchen</a>
+      </div>
+      <div class="visual">
+        <div class="photo-frame">
+          <img src="../images/power-hour.jpg" alt="Eine Planungssession im Gange">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= HONEST PROMISE ================= -->
+  <section class="section alt honest center">
+    <div class="wrap">
+      <p class="eyebrow">Das ehrliche Versprechen</p>
+      <p class="big">KI macht deine Hochzeit nicht perfekt, und sie wird die Profis, die du engagierst, niemals ersetzen. Was sie dir gibt, ist <em>Klarheit</em>: zu wissen, was als Nächstes zu tun ist, mit einem Entwurf, der schon vor dir liegt.</p>
+      <p class="small">Deine Floristin kennt die Blumen. Deine Fotografin kennt das Licht. Die Administration dazwischen, dort verdient sich eine KI-Assistentin ihren Platz, verfügbar um 3 Uhr morgens, wenn die Frage nicht warten will. Jeder Entwurf, den sie liefert, bleibt von dir gegenzulesen, und jede Zahl bleibt von dir zu prüfen.</p>
+    </div>
+  </section>
+
+  <!-- ================= FREE GUIDE (BONUS) ================= -->
+  <section class="bonus" id="guide">
+    <div class="wrap narrow center">
+      <p class="eyebrow">Ein kleines Extra · Kostenlos</p>
+      <h3>8 Prompts für die Momente, in denen Hochzeitsplanung schwer wird</h3>
+      <p style="font-size:15.5px;margin:8px 0 40px;">Acht Prompts, jeder für einen bestimmten Moment gebaut: der Moment, in dem du nicht weisst, wo anfangen, das Nein, für das dir die Worte fehlen, der Dienstleister, der nicht mehr antwortet, der Abend davor. Kopiere den Prompt in einen beliebigen KI-Chatbot, fülle die Klammern aus und schick ihn ab. Jede Seite sagt dir, was dich als Antwort erwartet, und erinnert dich daran, echte Namen und Adressen aus dem Chat zu lassen. Alle acht stammen aus einer einzigen echten Hochzeit, meiner. Der Guide ist auf Englisch, die Prompts funktionieren in deiner Sprache. Hier ist der erste:</p>
+      <div class="prompt-box" style="text-align:left;margin-bottom:40px;">
+        <span class="tag">Aus dem Guide</span>
+        <p>Verhalte dich wie eine sehr erfahrene Hochzeitsplanerin. Hier ist alles, was mir zu meiner Hochzeit gerade durch den Kopf geht: [füge deinen Gedanken-Dump ein, so viel oder so wenig du hast, in beliebiger Reihenfolge]. Lies alles durch und sag mir die eine Sache, die ich heute tun sollte, worauf ich mich den Rest der Woche konzentrieren soll, und was ich vorerst getrost ignorieren kann. Stell mir zuerst alle Fragen, die du brauchst.</p>
+      </div>
+      <a class="btn gold" href="https://the-resourceful-bride-free-ebook.subscribepage.io" target="_blank" rel="noopener">Schick mir die Prompts</a>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT ================= -->
+  <section class="section" id="about">
+    <div class="wrap feature">
+      <div>
+        <p class="eyebrow">Über mich</p>
+        <h2>Die Braut hinter der Marke</h2>
+        <p>Ich habe 2025 geheiratet: 120 Gäste an zwei Tagen, drei Sprachen unter ihnen, ohne Koordinatorin. Mein Standesamtskleid habe ich über acht Monate selbst genäht. Mein Vater und ich haben die Rasenspiele von Grund auf gebaut. Und als die Administration drohte, die ganze Freude zu verschlucken, habe ich einer KI-Assistentin beigebracht, sie mit mir zu tragen.</p>
+        <p style="margin-top:14px;">Mehr als 80 Aufgaben später wusste ich, dass dieses System es wert ist, geteilt zu werden. Ich baue die Tools und die Guides, und ich zeige die Methode live in der Power Hour. Die KI-Assistentin ist der Teil, der niemals schläft.</p>
+        <p style="margin-top:14px;">Mein Gesicht und meinen Namen halte ich bewusst offline. Die Arbeit spricht für sich.</p>
+      </div>
+      <div class="visual">
+        <div class="photo-frame" style="margin-bottom:24px;">
+          <img src="../images/about.jpg" alt="Ein handgemachtes Hochzeitsdetail">
+        </div>
+        <div class="about-marks">
+          <div><b>Handgemacht</b>Ein Standesamtskleid, über acht Monate genäht.</div>
+          <div><b>Selbst gebaut</b>Rasenspiele, von Grund auf gebaut, Vater und Tochter.</div>
+          <div><b>Dreisprachig</b>Jede Gästekommunikation auf Deutsch, Englisch und Französisch.</div>
+          <div><b>Mit KI</b>Mehr als 80 Planungsaufgaben, jeder Entwurf von einem Menschen geprüft.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <span class="wordmark"><span>The Resourceful</span><span>Bride</span></span>
+    <p class="tagline">Endlich ein Plan.</p>
+    <ul class="foot-links">
+      <li><a href="https://palette.theresourcefulbride.com" target="_blank" rel="noopener">Paletten-Tool</a></li>
+      <li><a href="#bingo">Foto-Bingo</a></li>
+      <li><a href="#ebook">Der Guide</a></li>
+      <li><a href="https://payhip.com/TheResourcefulBride" target="_blank" rel="noopener">Power Hour</a></li>
+      <li><a href="#guide">Gratis-Prompts</a></li>
+      <!-- LAUNCH-TAG: Kommentar-Markierungen entfernen, sobald der Etsy-Shop live ist. -->
+      <!--
+      <li><a href="https://www.etsy.com/shop/ResourcefulBrides" target="_blank" rel="noopener">Etsy-Shop</a></li>
+      -->
+      <li><a href="https://www.instagram.com/theresourcefulbride" target="_blank" rel="noopener">Instagram</a></li>
+    </ul>
+    <p class="langs"><a href="../" style="color:inherit;text-decoration:none;">EN</a> · <a href="../fr/" style="color:inherit;text-decoration:none;">FR</a> · <b style="color:var(--gold);font-weight:400;">DE</b></p>
+    <p class="legal">© 2026 The Resourceful Bride. Die KI entwirft, du entscheidest.</p>
+  </div>
+</footer>
+
+<script>
+  function swapBingo(btn){
+    var img = document.getElementById('bingo-img');
+    var lang = btn.getAttribute('data-lang');
+    img.onerror = function(){ this.onerror = null; this.src = '../images/bingo.png'; };
+    img.src = '../images/bingo-' + lang + '.png';
+    img.alt = btn.getAttribute('data-alt');
+    document.querySelectorAll('.bingo-langs button').forEach(function(b){
+      b.setAttribute('aria-pressed', b === btn ? 'true' : 'false');
+    });
+  }
+  function toggleNav(btn){
+    var links = document.getElementById('nav-links');
+    var open = links.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+  document.querySelectorAll('#nav-links a').forEach(function(a){
+    a.addEventListener('click', function(){
+      document.getElementById('nav-links').classList.remove('open');
+      document.querySelector('.menu-btn').setAttribute('aria-expanded','false');
+    });
+  });
+</script>
+
+</body>
+</html>
