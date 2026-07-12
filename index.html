@@ -325,6 +325,16 @@
     font-size:11px;letter-spacing:0.2em;text-transform:uppercase;
     color:var(--muted);padding:12px 4px 2px;text-align:center;
   }
+  .bingo-langs{display:flex;justify-content:center;align-items:center;gap:8px;padding:12px 4px 2px;}
+  .bingo-langs button{
+    background:none;border:none;cursor:pointer;
+    font-family:var(--serif);
+    font-size:11px;letter-spacing:0.2em;text-transform:uppercase;
+    color:var(--muted);padding:2px 4px;
+  }
+  .bingo-langs button:hover{color:var(--forest);}
+  .bingo-langs button[aria-pressed="true"]{color:var(--gold);}
+  .bingo-langs .sep{font-size:11px;color:var(--muted);}
   .photo-placeholder{
     aspect-ratio:4/5;
     background:var(--sand);
@@ -556,8 +566,13 @@
     <div class="wrap feature">
       <div class="visual">
         <div class="photo-frame">
-          <img src="images/bingo_en.png" alt="The wedding photo bingo card">
-          <div class="photo-caption">EN · FR · DE</div>
+          <!-- IMAGE FILES NEEDED: images/bingo-en.png, images/bingo-fr.png, images/bingo-de.png (one Canva export per language page). Until all three exist, the switcher falls back to the old bingo.png. -->
+          <img id="bingo-img" src="images/bingo-en.png" alt="The wedding photo bingo card in English" onerror="this.onerror=null;this.src='images/bingo.png';">
+          <div class="bingo-langs" role="group" aria-label="Choose the bingo card language">
+            <button type="button" data-lang="en" data-alt="The wedding photo bingo card in English" aria-pressed="true" onclick="swapBingo(this)">EN</button><span class="sep" aria-hidden="true">·</span>
+            <button type="button" data-lang="fr" data-alt="The wedding photo bingo card in French" aria-pressed="false" onclick="swapBingo(this)">FR</button><span class="sep" aria-hidden="true">·</span>
+            <button type="button" data-lang="de" data-alt="The wedding photo bingo card in German" aria-pressed="false" onclick="swapBingo(this)">DE</button>
+          </div>
         </div>
       </div>
       <div>
@@ -575,6 +590,7 @@
         <!--
         <p class="form-note">Prefer florals? The watercolour designs live in the <a href="https://www.etsy.com/shop/ResourcefulBrides" target="_blank" rel="noopener">Etsy shop</a>.</p>
         -->
+        <p class="form-note">On Instagram? DM the word BINGO to @theresourcefulbride and the template comes straight to you.</p>
       </div>
     </div>
   </section>
@@ -724,6 +740,16 @@
 </footer>
 
 <script>
+  function swapBingo(btn){
+    var img = document.getElementById('bingo-img');
+    var lang = btn.getAttribute('data-lang');
+    img.onerror = function(){ this.onerror = null; this.src = 'images/bingo.png'; };
+    img.src = 'images/bingo-' + lang + '.png';
+    img.alt = btn.getAttribute('data-alt');
+    document.querySelectorAll('.bingo-langs button').forEach(function(b){
+      b.setAttribute('aria-pressed', b === btn ? 'true' : 'false');
+    });
+  }
   function toggleNav(btn){
     var links = document.getElementById('nav-links');
     var open = links.classList.toggle('open');
