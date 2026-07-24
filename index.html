@@ -408,10 +408,10 @@
     font-size:clamp(22px,3vw,30px);
     font-style:italic;line-height:1.6;
     max-width:760px;margin:0 auto;
-    color:var(--forest);
+    color:var(--cream);
   }
   .honest .big em{color:var(--gold);font-style:italic;}
-  .honest .small{max-width:640px;margin:28px auto 0;color:var(--ink);font-size:16px;}
+  .honest .small{max-width:640px;margin:28px auto 0;color:#DCE2D8;font-size:16px;}
 
   /* ---------- bonus band (free guide) ---------- */
   .bonus{
@@ -480,10 +480,10 @@
     <a class="wordmark" href="#top"><img class="logo" src="images/logo.png" alt="" onerror="this.style.display='none'"><span class="wm-text"><span>The Resourceful</span><span>Bride</span></span></a>
     <button class="menu-btn" aria-expanded="false" aria-controls="nav-links" onclick="toggleNav(this)">Menu</button>
     <ul class="nav-links" id="nav-links">
-      <li><a href="#palette">Palette Tool</a></li>
-      <li><a href="#bingo">Photo Bingo</a></li>
       <li><a href="#ebook">The Guide</a></li>
       <li><a href="#powerhour">Power Hour</a></li>
+      <li><a href="#palette">Palette Tool</a></li>
+      <li><a href="#bingo">Photo Bingo</a></li>
       <li><a href="#about">About</a></li>
       <!-- LAUNCH DAY: once the guide is live, change this text to "Get the guide". -->
       <li><a class="nav-cta" href="#ebook">Get the guide</a></li>
@@ -500,8 +500,8 @@
     <div class="double-rule"></div>
     <p class="lede">I planned a two-day, trilingual wedding for 120 guests at a 17th‑century Swiss manor, without a coordinator. An AI assistant helped me think through more than 80 planning tasks along the way. Everything I learned now lives here, ready for your wedding.</p>
     <div class="hero-ctas">
-      <a class="btn" href="https://palette.theresourcefulbride.com" target="_blank" rel="noopener">Try the palette tool</a>
-      <a class="btn ghost" href="#bingo">Get the photo bingo</a>
+      <a class="btn" href="#ebook">Get the guide</a>
+      <a class="btn ghost" href="https://palette.theresourcefulbride.com" target="_blank" rel="noopener">Try the palette tool</a>
     </div>
   </section>
 
@@ -512,6 +512,74 @@
       <div class="cell"><div class="n">3</div><div class="l">Languages</div></div>
       <div class="cell"><div class="n">2</div><div class="l">Days</div></div>
       <div class="cell"><div class="n">80+</div><div class="l">AI‑assisted tasks</div></div>
+    </div>
+  </section>
+
+  <!-- ================= THE GUIDE ================= -->
+  <section class="section" id="ebook">
+    <div class="wrap feature">
+      <div>
+        <p class="eyebrow">The Guide · Now Available</p>
+        <h2>Your Personal Wedding Planning Assistant</h2>
+        <p class="lede">The complete guide. A system that starts by teaching the AI who you are and what your wedding looks like, then builds everything from there, from your timeline to every guest communication, in each language your wedding speaks. Built from my own wedding: 120 guests, two days, three languages, more than 80 AI-assisted tasks. It is also honest about what AI cannot do, and why your day still needs the humans you trust.</p>
+        <ul class="ph-list">
+          <li>The complete setup, from your very first prompt to an AI assistant that knows your wedding</li>
+          <li>Personalised timelines and every checklist you will actually need</li>
+          <li>A budget structure built around your real numbers, every one verified by you</li>
+          <li>Drafting help for vendor emails, invitations, your wedding website and your thank-you cards</li>
+          <li>A troubleshooting toolkit for when an answer misses the mark</li>
+        </ul>
+        <p class="lede" style="margin-top:26px;">It comes as an interactive Notion edition: read it right in your browser with no account at all, or duplicate it into a free Notion workspace and make it yours. Every future update is free, for life.</p>
+        <p class="price-line"><b>CHF 27</b> launch price · CHF 39 after</p>
+        <a class="btn gold" href="https://payhip.com/b/QUcXg" target="_blank" rel="noopener">Get the guide</a>
+      </div>
+      <div class="visual">
+        <div class="photo-frame">
+          <img src="images/guide-preview.png" alt="A look inside the wedding planning guide" onerror="this.closest('.visual').style.display='none';">
+        </div>
+      </div>
+    </div>
+    <!-- ==================================================== -->
+    <!-- LAUNCH DAY: remove the comment markers below once    -->
+    <!-- the Notion companion (Wedding HQ) is live. Before    -->
+    <!-- flipping: verify the name, the price and the exact   -->
+    <!-- Payhip link. The companion always appears under the  -->
+    <!-- guide, never beside it as a competing product.       -->
+    <!-- ==================================================== -->
+    <!--
+    <div class="wrap narrow center" style="margin-top:52px;padding-top:44px;border-top:1px solid rgba(198,165,108,0.4);">
+      <p class="eyebrow">New · The Second Layer</p>
+      <h3 style="font-size:24px;font-style:italic;color:var(--forest);">The Wedding HQ</h3>
+      <p class="lede" style="font-size:16px;margin-top:14px;">The guide shows you the system. The Wedding HQ is where it lives: a fully built Notion workspace for your entire planning, made to work together with your AI assistant. The connected assistant workflow needs an AI plan that includes the Notion connector; everything else works without it.</p>
+      <div style="text-align:center;margin-top:26px;"><a class="btn gold" href="https://payhip.com/TheResourcefulBride" target="_blank" rel="noopener">See the Wedding HQ</a></div>
+    </div>
+    -->
+  </section>
+
+  <!-- ================= POWER HOUR ================= -->
+  <section class="section waitlist" id="powerhour">
+    <div class="wrap feature">
+      <div class="visual">
+        <div class="photo-frame">
+          <img src="images/power-hour.jpg" alt="A wedding planning session in progress">
+        </div>
+      </div>
+      <div>
+        <p class="eyebrow">Work With Me · 1:1</p>
+        <h2>Bridal AI Power Hour</h2>
+        <p>You are spending hours on things that should take minutes. Your timeline is not built and your vendor emails are sitting in drafts. In 60 minutes on Zoom, we change that. We start with your single biggest planning stressor and build your system live, together, in Claude or ChatGPT, so you can see exactly how it works and repeat it yourself afterwards.</p>
+        <ul class="ph-list">
+          <li>Day‑of timelines built to the minute</li>
+          <li>Vendor emails drafted in French, German or English</li>
+          <li>Budget thinking and creative alternatives, with every number verified by you</li>
+          <li>Multilingual guest communications</li>
+          <li>The night‑before checklist</li>
+        </ul>
+        <p>You leave with a working document you can use the same day.</p>
+        <p style="margin-top:14px;">The session runs on the same system <a href="#ebook" style="color:inherit;text-decoration:underline;">the guide</a> teaches: we take the parts your wedding needs most and build them live, tailored to you.</p>
+        <p class="price-line" style="color:#D8C09A;"><b>CHF 149</b> · 60 minutes · Zoom · EN, FR or DE</p>
+        <a class="btn gold" href="https://payhip.com/TheResourcefulBride" target="_blank" rel="noopener">Book your session</a>
+      </div>
     </div>
   </section>
 
@@ -600,74 +668,8 @@
     </div>
   </section>
 
-  <!-- ================= EBOOK WAITLIST ================= -->
-  <section class="section waitlist" id="ebook">
-    <div class="wrap narrow center">
-      <p class="eyebrow">The Guide · Now Available</p>
-      <h2>Your Personal Wedding Planning Assistant</h2>
-      <p class="lede">The complete guide. A system that starts by teaching the AI who you are and what your wedding looks like, then builds everything from there, from your timeline to every guest communication, in each language your wedding speaks. Built from my own wedding: 120 guests, two days, three languages, more than 80 AI-assisted tasks. It is also honest about what AI cannot do, and why your day still needs the humans you trust.</p>
-      <ul class="ph-list" style="text-align:left;max-width:600px;margin-left:auto;margin-right:auto;">
-        <li>The complete setup, from your very first prompt to an AI assistant that knows your wedding</li>
-        <li>Personalised timelines and every checklist you will actually need</li>
-        <li>A budget structure built around your real numbers, every one verified by you</li>
-        <li>Drafting help for vendor emails, invitations, your wedding website and your thank-you cards</li>
-        <li>A troubleshooting toolkit for when an answer misses the mark</li>
-      </ul>
-      <p class="lede" style="margin-top:26px;">It comes as an interactive Notion edition: read it right in your browser with no account at all, or duplicate it into a free Notion workspace and make it yours. Every future update is free, for life.</p>
-      <div class="photo-frame" style="max-width:600px;margin:36px auto 0;">
-        <img src="images/guide-preview.png" alt="A look inside the wedding planning guide" onerror="this.closest('.photo-frame').style.display='none';">
-      </div>
-
-      <p class="price-line" style="color:#D8C09A;text-align:center;"><b>CHF 27</b> launch price · CHF 39 after</p>
-      <div style="text-align:center;"><a class="btn gold" href="https://payhip.com/b/QUcXg" target="_blank" rel="noopener">Get the guide</a></div>
-
-      <!-- ==================================================== -->
-      <!-- LAUNCH DAY: remove the comment markers once the      -->
-      <!-- Notion companion (Wedding HQ) is live. Before        -->
-      <!-- flipping: verify the name, the price and the exact   -->
-      <!-- Payhip link. The companion always appears under the  -->
-      <!-- guide, never beside it as a competing product.       -->
-      <!-- ==================================================== -->
-      <!--
-      <div style="margin-top:52px;padding-top:44px;border-top:1px solid rgba(198,165,108,0.4);">
-        <p class="eyebrow">New · The Second Layer</p>
-        <h3 style="font-size:24px;font-style:italic;color:var(--cream);">The Wedding HQ</h3>
-        <p class="lede" style="font-size:16px;margin-top:14px;">The guide shows you the system. The Wedding HQ is where it lives: a fully built Notion workspace for your entire planning, made to work together with your AI assistant. The connected assistant workflow needs an AI plan that includes the Notion connector; everything else works without it.</p>
-        <div style="text-align:center;margin-top:26px;"><a class="btn gold" href="https://payhip.com/TheResourcefulBride" target="_blank" rel="noopener">See the Wedding HQ</a></div>
-      </div>
-      -->
-    </div>
-  </section>
-
-  <!-- ================= POWER HOUR ================= -->
-  <section class="section" id="powerhour">
-    <div class="wrap feature">
-      <div>
-        <p class="eyebrow">Work With Me · 1:1</p>
-        <h2>Bridal AI Power Hour</h2>
-        <p>You are spending hours on things that should take minutes. Your timeline is not built and your vendor emails are sitting in drafts. In 60 minutes on Zoom, we change that. We start with your single biggest planning stressor and build your system live, together, in Claude or ChatGPT, so you can see exactly how it works and repeat it yourself afterwards.</p>
-        <ul class="ph-list">
-          <li>Day‑of timelines built to the minute</li>
-          <li>Vendor emails drafted in French, German or English</li>
-          <li>Budget thinking and creative alternatives, with every number verified by you</li>
-          <li>Multilingual guest communications</li>
-          <li>The night‑before checklist</li>
-        </ul>
-        <p>You leave with a working document you can use the same day.</p>
-        <p style="margin-top:14px;">The session runs on the same system <a href="#ebook" style="color:inherit;text-decoration:underline;">the guide</a> teaches: we take the parts your wedding needs most and build them live, tailored to you.</p>
-        <p class="price-line"><b>CHF 149</b> · 60 minutes · Zoom · EN, FR or DE</p>
-        <a class="btn" href="https://payhip.com/TheResourcefulBride" target="_blank" rel="noopener">Book your session</a>
-      </div>
-      <div class="visual">
-        <div class="photo-frame">
-          <img src="images/power-hour.jpg" alt="A wedding planning session in progress">
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- ================= HONEST PROMISE ================= -->
-  <section class="section alt honest center">
+  <section class="section waitlist honest center">
     <div class="wrap">
       <p class="eyebrow">The Honest Promise</p>
       <p class="big">AI will not make your wedding perfect, and it will never replace the professionals you hire. What it gives you is <em>clarity</em>: knowing what to do next, with a draft already in front of you.</p>
