@@ -205,6 +205,8 @@
   .feature{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;}
   @media (max-width:860px){.feature{grid-template-columns:1fr;gap:44px;}}
   .feature .visual{min-width:0;}
+  .feature.guide{grid-template-columns:1.7fr 1fr;gap:56px;}
+  @media (max-width:860px){.feature.guide{grid-template-columns:1fr;}}
 
   /* ---------- palette preview (matches the palette tool format) ---------- */
   .palette-frame{
@@ -517,7 +519,7 @@
 
   <!-- ================= THE GUIDE ================= -->
   <section class="section" id="ebook">
-    <div class="wrap feature">
+    <div class="wrap feature guide">
       <div>
         <p class="eyebrow">The Guide · Now Available</p>
         <h2>Your Personal Wedding Planning Assistant</h2>
