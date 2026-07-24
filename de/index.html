@@ -164,7 +164,7 @@
   }
 
   /* ---------- hero ---------- */
-  .hero{padding:116px 0 104px;text-align:center;}
+  .hero{padding:52px 0 72px;text-align:center;}
   .hero .kicker{
     font-size:12px;letter-spacing:0.3em;text-transform:uppercase;
     color:var(--muted);margin-bottom:34px;
@@ -473,13 +473,13 @@
     <a class="wordmark" href="#top"><img class="logo" src="../images/logo.png" alt="" onerror="this.style.display='none'"><span class="wm-text"><span>The Resourceful</span><span>Bride</span></span></a>
     <button class="menu-btn" aria-expanded="false" aria-controls="nav-links" onclick="toggleNav(this)">Menü</button>
     <ul class="nav-links" id="nav-links">
-      <li><a href="#palette">Palette</a></li>
+      <li><a href="#palette">Paletten-Tool</a></li>
       <li><a href="#bingo">Foto-Bingo</a></li>
       <li><a href="#ebook">Der Guide</a></li>
       <li><a href="#powerhour">Power Hour</a></li>
       <li><a href="#about">Über mich</a></li>
       <!-- LAUNCH-TAG: Sobald der Guide live ist, Text auf "Guide holen" ändern. -->
-      <li><a class="nav-cta" href="#ebook">Guide holen</a></li>
+      <li><a class="nav-cta" href="#ebook">Den Guide holen</a></li>
     </ul>
   </div>
 </header>
@@ -488,10 +488,10 @@
 
   <!-- ================= HERO ================= -->
   <section class="hero wrap">
-    <p class="kicker">Hochzeitsplanung mit KI · DE · EN · FR</p>
+    <p class="kicker">Hochzeitsplanung mit KI · <b style="color:var(--gold);font-weight:400;">DE</b> · <a href="../">EN</a> · <a href="../fr/">FR</a></p>
     <h1>Endlich ein Plan.</h1>
     <div class="double-rule"></div>
-    <p class="lede">Ich habe eine zweitägige, dreisprachige Hochzeit für 120 Gäste in einem Schweizer Herrenhaus aus dem 17. Jahrhundert geplant, ohne Koordinatorin. Eine KI-Assistentin hat mir unterwegs geholfen, mehr als 80 Planungsaufgaben zu durchdenken. Alles, was ich dabei gelernt habe, lebt jetzt hier, bereit für deine Hochzeit.</p>
+    <p class="lede">Ich habe eine zweitägige, dreisprachige Hochzeit für 120 Gäste in einem Schweizer Herrenhaus aus dem 17. Jahrhundert geplant, ohne Koordinatorin. Ein KI-Assistent hat mir unterwegs geholfen, mehr als 80 Planungsaufgaben zu durchdenken. Alles, was ich dabei gelernt habe, lebt jetzt hier, bereit für deine Hochzeit.</p>
     <div class="hero-ctas">
       <a class="btn" href="https://palette.theresourcefulbride.com" target="_blank" rel="noopener">Paletten-Tool ausprobieren</a>
       <a class="btn ghost" href="#bingo">Zum Foto-Bingo</a>
@@ -575,18 +575,21 @@
         <p class="eyebrow">Kostenlose Vorlage</p>
         <h2>Dreisprachiges Hochzeits-Foto-Bingo</h2>
         <p>Ein Gästespiel, das an jedem Tisch funktioniert, auch wenn die Tische keine gemeinsame Sprache haben. Jede Karte schickt deine Gäste auf die Jagd nach den Fotos, die du dir von deinem Tag wirklich wünschst. Die Vorlage enthält die komplette Karte auf Deutsch, Englisch und Französisch, eine Seite pro Sprache, damit jeder Tisch in seiner Sprache spielt.</p>
-        <p style="margin-top:14px;">Karten ausdrucken, einen Stift auf jeden Tisch legen und das Spiel übernimmt das Kennenlernen. Das minimalistische Design ist kostenlos, direkt in Canva:</p>
+        <p style="margin-top:14px;">Karten ausdrucken, einen Stift auf jeden Tisch legen und das Spiel übernimmt das Kennenlernen. Das minimalistische Design ist kostenlos, direkt in Canva. Lieber Blumen? Die Aquarell-Designs gibt es auf Etsy:</p>
         <ul class="template-list">
           <li>
-            <span class="t-name">Minimalistisch</span>
+            <span class="t-name">Minimalistisch · kostenlos</span>
             <a class="btn ghost small" href="https://canva.link/fzs5dnb53d3kqzr" target="_blank" rel="noopener">In Canva öffnen</a>
           </li>
+          <li>
+            <span class="t-name">Aquarell-Blumen in Blau</span>
+            <a class="btn ghost small" href="https://resourcefulbrides.etsy.com/listing/4541747811/trilingual-wedding-photo-bingo-game" target="_blank" rel="noopener">Auf Etsy ansehen</a>
+          </li>
+          <li>
+            <span class="t-name">Aquarell-Blumen in Rosa</span>
+            <a class="btn ghost small" href="https://resourcefulbrides.etsy.com/listing/4541783567/trilingual-wedding-photo-bingo-game" target="_blank" rel="noopener">Auf Etsy ansehen</a>
+          </li>
         </ul>
-        <!-- LAUNCH-TAG: Kommentar-Markierungen entfernen, sobald der Etsy-Shop live ist. -->
-        <!--
-        <p class="form-note">Lieber Blumen? Die Aquarell-Designs findest du im <a href="https://www.etsy.com/shop/ResourcefulBrides" target="_blank" rel="noopener">Etsy-Shop</a>.</p>
-        -->
-        <p class="form-note">Auf Instagram? Schreib @theresourcefulbride eine DM mit dem Wort BINGO und die Vorlage kommt direkt zu dir.</p>
       </div>
     </div>
   </section>
@@ -596,9 +599,20 @@
     <div class="wrap narrow center">
       <p class="eyebrow">Der Guide · Jetzt erhältlich</p>
       <h2>Your Personal Wedding Planning Assistant</h2>
-      <p class="lede">Der komplette Guide. Ein System, das der KI zuerst beibringt, wer du bist und wie deine Hochzeit aussieht, und von dort aus alles Weitere aufbaut, vom Tagesablauf bis zu jeder Gästekommunikation, in jeder Sprache, die deine Hochzeit spricht. Es kommt als interaktive Notion-Edition: Du kannst sie direkt im Browser lesen, ganz ohne Konto. Mit einem kostenlosen Notion-Account duplizierst du sie in deinen eigenen Workspace und planst direkt darin, mit jedem künftigen Update kostenlos, ein Leben lang. Es ist auch ehrlich darüber, was KI nicht kann, und warum dein Tag weiterhin die Menschen braucht, denen du vertraust.</p>
+      <p class="lede">Der komplette Guide. Ein System, das der KI zuerst beibringt, wer du bist und wie deine Hochzeit aussieht, und von dort aus alles Weitere aufbaut, vom Tagesablauf bis zu jeder Gästekommunikation, in jeder Sprache, die deine Hochzeit spricht. Entstanden aus meiner eigenen Hochzeit: 120 Gäste, zwei Tage, drei Sprachen, über 80 KI-gestützte Aufgaben. Er ist auch ehrlich darüber, was KI nicht kann, und warum dein Tag weiterhin die Menschen braucht, denen du vertraust.</p>
+      <ul class="ph-list" style="text-align:left;max-width:600px;margin-left:auto;margin-right:auto;">
+        <li>Das komplette Setup, vom allerersten Prompt bis zum KI-Assistenten, der deine Hochzeit kennt</li>
+        <li>Personalisierte Zeitpläne und jede Checkliste, die du wirklich brauchst</li>
+        <li>Eine Budgetstruktur rund um deine echten Zahlen, jede einzelne von dir geprüft</li>
+        <li>Schreibhilfe für Dienstleister-E-Mails, Einladungen, deine Hochzeitswebsite und deine Dankeskarten</li>
+        <li>Ein Troubleshooting-Werkzeugkasten für Antworten, die danebenliegen</li>
+      </ul>
+      <p class="lede" style="margin-top:26px;">Der Guide kommt als interaktive Notion-Edition: Lies ihn direkt im Browser ganz ohne Konto, oder dupliziere ihn in einen kostenlosen Notion-Workspace und mach ihn zu deinem. Jedes künftige Update ist kostenlos, ein Leben lang.</p>
+      <div class="photo-frame" style="max-width:600px;margin:36px auto 0;">
+        <img src="../images/guide-preview.png" alt="Ein Blick in den Guide" onerror="this.closest('.photo-frame').style.display='none';">
+      </div>
       <p class="price-line" style="color:#D8C09A;text-align:center;"><b>CHF 27</b> Einführungspreis · danach CHF 39</p>
-      <p class="form-note" style="text-align:center;">Der Guide ist derzeit auf Englisch erhältlich. Eine deutsche Ausgabe ist in Planung.</p>
+      <p class="form-note" style="text-align:center;">Der Guide ist derzeit auf Englisch erhältlich. Eine deutsche Ausgabe ist in Vorbereitung.</p>
       <div style="text-align:center;"><a class="btn gold" href="https://payhip.com/b/QUcXg" target="_blank" rel="noopener">Guide holen</a></div>
 
       <!-- LAUNCH-TAG: Kommentar-Markierungen entfernen, sobald der Notion-Companion (Wedding HQ) live ist. Vorher: Namen, Preis und exakten Payhip-Link prüfen. Der Companion erscheint immer unter dem Guide, nie als eigenständige Konkurrenz dazu. -->
@@ -606,7 +620,7 @@
       <div style="margin-top:52px;padding-top:44px;border-top:1px solid rgba(198,165,108,0.4);">
         <p class="eyebrow">Neu · Die zweite Ebene</p>
         <h3 style="font-size:24px;font-style:italic;color:var(--cream);">Das Wedding HQ</h3>
-        <p class="lede" style="font-size:16px;margin-top:14px;">Der Guide zeigt dir das System. Das Wedding HQ ist der Ort, an dem es wohnt: ein fertig aufgebauter Notion-Workspace für deine gesamte Planung, gebaut für die Zusammenarbeit mit deiner KI-Assistentin. Der verbundene Assistenten-Workflow braucht einen KI-Plan mit Notion-Anbindung; alles andere funktioniert auch ohne.</p>
+        <p class="lede" style="font-size:16px;margin-top:14px;">Der Guide zeigt dir das System. Das Wedding HQ ist der Ort, an dem es wohnt: ein fertig aufgebauter Notion-Workspace für deine gesamte Planung, gebaut für die Zusammenarbeit mit deinem KI-Assistenten. Der verbundene Assistenten-Workflow braucht einen KI-Plan mit Notion-Anbindung; alles andere funktioniert auch ohne.</p>
         <div style="text-align:center;margin-top:26px;"><a class="btn gold" href="https://payhip.com/TheResourcefulBride" target="_blank" rel="noopener">Zum Wedding HQ</a></div>
       </div>
       -->
@@ -628,6 +642,7 @@
           <li>Die Checkliste für den Abend davor</li>
         </ul>
         <p>Du gehst mit einem Dokument nach Hause, das du noch am selben Tag nutzen kannst.</p>
+        <p style="margin-top:14px;">Die Session baut auf demselben System auf wie <a href="#ebook" style="color:inherit;text-decoration:underline;">der Guide</a>: Wir nehmen die Teile, die deine Hochzeit am dringendsten braucht, und bauen sie live, zugeschnitten auf dich.</p>
         <p class="price-line"><b>CHF 149</b> · 60 Minuten · Zoom · DE, EN oder FR</p>
         <a class="btn" href="https://payhip.com/TheResourcefulBride" target="_blank" rel="noopener">Session buchen</a>
       </div>
@@ -644,23 +659,11 @@
     <div class="wrap">
       <p class="eyebrow">Das ehrliche Versprechen</p>
       <p class="big">KI macht deine Hochzeit nicht perfekt, und sie wird die Profis, die du engagierst, niemals ersetzen. Was sie dir gibt, ist <em>Klarheit</em>: zu wissen, was als Nächstes zu tun ist, mit einem Entwurf, der schon vor dir liegt.</p>
-      <p class="small">Deine Floristin kennt die Blumen. Deine Fotografin kennt das Licht. Die Administration dazwischen, dort verdient sich eine KI-Assistentin ihren Platz, verfügbar um 3 Uhr morgens, wenn die Frage nicht warten will. Jeder Entwurf, den sie liefert, bleibt von dir gegenzulesen, und jede Zahl bleibt von dir zu prüfen.</p>
+      <p class="small">Deine Floristin kennt die Blumen. Deine Fotografin kennt das Licht. Die Administration dazwischen, dort verdient sich ein KI-Assistent seinen Platz, verfügbar um 3 Uhr morgens, wenn die Frage nicht warten will. Jeder Entwurf, den er liefert, bleibt von dir gegenzulesen, und jede Zahl bleibt von dir zu prüfen.</p>
     </div>
   </section>
 
   <!-- ================= FREE GUIDE (BONUS) ================= -->
-  <section class="bonus" id="guide">
-    <div class="wrap narrow center">
-      <p class="eyebrow">Ein kleines Extra · Kostenlos</p>
-      <h3>8 Prompts für die Momente, in denen Hochzeitsplanung schwer wird</h3>
-      <p style="font-size:15.5px;margin:8px 0 40px;">Acht Prompts, jeder für einen bestimmten Moment gebaut: der Moment, in dem du nicht weisst, wo anfangen, das Nein, für das dir die Worte fehlen, der Dienstleister, der nicht mehr antwortet, der Abend davor. Kopiere den Prompt in einen beliebigen KI-Chatbot, fülle die Klammern aus und schick ihn ab. Jede Seite sagt dir, was dich als Antwort erwartet, und erinnert dich daran, echte Namen und Adressen aus dem Chat zu lassen. Alle acht stammen aus einer einzigen echten Hochzeit, meiner. Der Guide ist auf Englisch, die Prompts funktionieren in deiner Sprache. Hier ist der erste:</p>
-      <div class="prompt-box" style="text-align:left;margin-bottom:40px;">
-        <span class="tag">Aus dem Guide</span>
-        <p>Verhalte dich wie eine sehr erfahrene Hochzeitsplanerin. Hier ist alles, was mir zu meiner Hochzeit gerade durch den Kopf geht: [füge deinen Gedanken-Dump ein, so viel oder so wenig du hast, in beliebiger Reihenfolge]. Lies alles durch und sag mir die eine Sache, die ich heute tun sollte, worauf ich mich den Rest der Woche konzentrieren soll, und was ich vorerst getrost ignorieren kann. Stell mir zuerst alle Fragen, die du brauchst.</p>
-      </div>
-      <a class="btn gold" href="https://the-resourceful-bride-free-ebook.subscribepage.io" target="_blank" rel="noopener">Schick mir die Prompts</a>
-    </div>
-  </section>
 
   <!-- ================= ABOUT ================= -->
   <section class="section" id="about">
@@ -668,8 +671,8 @@
       <div>
         <p class="eyebrow">Über mich</p>
         <h2>Die Braut hinter der Marke</h2>
-        <p>Ich habe 2025 geheiratet: 120 Gäste an zwei Tagen, drei Sprachen unter ihnen, ohne Koordinatorin. Mein Standesamtskleid habe ich über acht Monate selbst genäht. Mein Vater und ich haben die Rasenspiele von Grund auf gebaut. Und als die Administration drohte, die ganze Freude zu verschlucken, habe ich einer KI-Assistentin beigebracht, sie mit mir zu tragen.</p>
-        <p style="margin-top:14px;">Mehr als 80 Aufgaben später wusste ich, dass dieses System es wert ist, geteilt zu werden. Ich baue die Tools und die Guides, und ich zeige die Methode live in der Power Hour. Die KI-Assistentin ist der Teil, der niemals schläft.</p>
+        <p>Ich habe 2025 geheiratet: 120 Gäste an zwei Tagen, drei Sprachen unter ihnen, ohne Koordinatorin. Mein Standesamtskleid habe ich über acht Monate selbst genäht. Mein Vater und ich haben die Rasenspiele von Grund auf gebaut. Und als die Administration drohte, die ganze Freude zu verschlucken, habe ich einem KI-Assistenten beigebracht, sie mit mir zu tragen.</p>
+        <p style="margin-top:14px;">Mehr als 80 Aufgaben später wusste ich, dass dieses System es wert ist, geteilt zu werden. Ich baue die Tools und die Guides, und ich zeige die Methode live in der Power Hour. Der KI-Assistent ist der Teil, der niemals schläft.</p>
         <p style="margin-top:14px;">Mein Gesicht und meinen Namen halte ich bewusst offline. Die Arbeit spricht für sich.</p>
       </div>
       <div class="visual">
@@ -698,11 +701,7 @@
       <li><a href="#bingo">Foto-Bingo</a></li>
       <li><a href="#ebook">Der Guide</a></li>
       <li><a href="https://payhip.com/TheResourcefulBride" target="_blank" rel="noopener">Power Hour</a></li>
-      <li><a href="#guide">Gratis-Prompts</a></li>
-      <!-- LAUNCH-TAG: Kommentar-Markierungen entfernen, sobald der Etsy-Shop live ist. -->
-      <!--
       <li><a href="https://www.etsy.com/shop/ResourcefulBrides" target="_blank" rel="noopener">Etsy-Shop</a></li>
-      -->
       <li><a href="https://www.instagram.com/theresourcefulbride" target="_blank" rel="noopener">Instagram</a></li>
     </ul>
     <p class="langs"><a href="../" style="color:inherit;text-decoration:none;">EN</a> · <a href="../fr/" style="color:inherit;text-decoration:none;">FR</a> · <b style="color:var(--gold);font-weight:400;">DE</b></p>
