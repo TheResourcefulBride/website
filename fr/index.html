@@ -26,6 +26,7 @@
   }
   *{margin:0;padding:0;box-sizing:border-box;}
   html{scroll-behavior:smooth;}
+  [id]{scroll-margin-top:88px;} /* anchored sections land below the sticky header */
   @media (prefers-reduced-motion: reduce){
     html{scroll-behavior:auto;}
     *,*::before,*::after{animation:none!important;transition:none!important;}
@@ -740,6 +741,20 @@
       document.querySelector('.menu-btn').setAttribute('aria-expanded','false');
     });
   });
+  /* Re-anchor after full load: images loading above an anchored section
+     shift the layout after the initial jump, which previously landed
+     visitors from pinned links on the wrong section. */
+  (function(){
+    function reAnchor(){
+      if(!location.hash) return;
+      var el = document.getElementById(location.hash.slice(1));
+      if(el) el.scrollIntoView();
+    }
+    window.addEventListener('load', function(){
+      reAnchor();
+      setTimeout(reAnchor, 350); /* second pass for late layout shifts */
+    });
+  })();
 </script>
 
 </body>
